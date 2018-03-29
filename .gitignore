@@ -2,3 +2,5 @@
 .idea
 node_modules/
 images/
+data/
+configs.js
