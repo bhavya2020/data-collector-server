@@ -4,8 +4,8 @@ const express = require('express'),
 const bodyParser = require('body-parser');
 const fs=require('fs');
 const models=require('./models/mongo');
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 let imgName=1;
 app.post("/click",(req,res)=>{
     //console.log(req.body.img);
@@ -17,7 +17,7 @@ app.post("/click",(req,res)=>{
 });
 app.post("/sensor",(req,res)=>{
 
-   // console.log(req.body);
+    //console.log(req.body);
     models.sensor.create(req.body);
     res.send("got");
 });

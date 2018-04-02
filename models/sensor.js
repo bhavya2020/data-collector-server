@@ -2,10 +2,18 @@ const mongoose = require("mongoose");
 
 const sensorSchema = mongoose.Schema({
 
-    sensor: String,
-    x: String,
-    y: String,
-    z: String,
+    ax: String,
+    ay: String,
+    az: String,
+    lx: String,
+    ly: String,
+    lz: String,
+    gx: String,
+    gy: String,
+    gz: String,
+    mx: String,
+    my: String,
+    mz: String,
     class: String,
 
 });
